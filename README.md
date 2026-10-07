@@ -19,6 +19,7 @@ Paket tema dan konfigurasi **Claude UI (Anthropic)** untuk [Hermes Agent](https:
 - 🔤 **Modern Sans Typography**: Konfigurasi font otomatis `Inter / Segoe UI / SF Pro` untuk tampilan modern.
 - 🧹 **Distraction-Free**: Nonaktifkan badge cost token dan gamifikasi visual agar fokus pada teks.
 - ⚡ **Multi-Surface Hot Reload**: Otomatis diterapkan serentak ke **Desktop GUI, TUI, dan CLI** secara *live*.
+- 🗂️ **Enhanced Session Tabs**: Header tab sesi diperbesar lebih lega dengan jarak antar tab yang tegas dan jelas (Dark & Light).
 
 ---
 

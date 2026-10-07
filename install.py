@@ -66,7 +66,24 @@ def main():
             except Exception as e:
                 print(f"     ❌ Failed downloading {skin}: {e}")
 
-    print("  ✓ Skin files installed successfully.\n")
+    # Desktop plugin for enhanced tab bar
+    plugins_dir = hermes_home / "desktop-plugins" / "claude-enhanced-tabs"
+    plugins_dir.mkdir(parents=True, exist_ok=True)
+    plugin_target = plugins_dir / "plugin.js"
+    local_plugin = script_dir / "desktop-plugins" / "claude-enhanced-tabs" / "plugin.js" if script_dir else None
+    if local_plugin and local_plugin.is_file():
+        print("  📦 Copying claude-enhanced-tabs desktop plugin (local)...")
+        plugin_target.write_bytes(local_plugin.read_bytes())
+    else:
+        plugin_url = f"{REPO_BASE}/desktop-plugins/claude-enhanced-tabs/plugin.js"
+        print("  🌐 Downloading claude-enhanced-tabs desktop plugin from GitHub...")
+        try:
+            with urllib.request.urlopen(plugin_url) as resp:
+                plugin_target.write_bytes(resp.read())
+        except Exception as e:
+            print(f"     ⚠️ Desktop plugin download: {e}")
+
+    print("  ✓ Skin & Plugin files installed successfully.\n")
 
     # Run hermes config set commands
     config_commands = [
