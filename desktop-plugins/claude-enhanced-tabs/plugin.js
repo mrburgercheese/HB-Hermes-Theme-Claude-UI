@@ -59,7 +59,9 @@ const CSS_CONTENT = `
   .dark .group\\/pane-header [data-tree-tab]:not([data-active="true"]),
   .dark [data-zone-tabstrip] [data-tree-tab]:not([data-active="true"]),
   .dark .group\\/tab:not([data-active="true"]),
-  .dark .group\\/tab:not([data-active="true"]) span {
+  .dark .group\\/tab:not([data-active="true"]) span,
+  [data-hermes-theme="claude-dark"] .group\\/tab:not([data-active="true"]) span,
+  [data-hermes-theme="claude"] .group\\/tab:not([data-active="true"]) span {
     color: #a8a29e !important;
   }
 
@@ -67,7 +69,8 @@ const CSS_CONTENT = `
   :not(.dark) .group\\/pane-header [data-tree-tab]:not([data-active="true"]),
   :not(.dark) [data-zone-tabstrip] [data-tree-tab]:not([data-active="true"]),
   :not(.dark) .group\\/tab:not([data-active="true"]),
-  :not(.dark) .group\\/tab:not([data-active="true"]) span {
+  :not(.dark) .group\\/tab:not([data-active="true"]) span,
+  [data-hermes-theme="claude-light"] .group\\/tab:not([data-active="true"]) span {
     color: #57534e !important;
   }
 
@@ -79,17 +82,20 @@ const CSS_CONTENT = `
     opacity: 1 !important;
     border-color: var(--ui-stroke-secondary, rgba(128, 128, 128, 0.35)) !important;
   }
-  .dark .group\\/tab:not([data-active="true"]):hover span {
+  .dark .group\\/tab:not([data-active="true"]):hover span,
+  [data-hermes-theme="claude-dark"] .group\\/tab:not([data-active="true"]):hover span {
     color: #ffffff !important;
   }
-  :not(.dark) .group\\/tab:not([data-active="true"]):hover span {
+  :not(.dark) .group\\/tab:not([data-active="true"]):hover span,
+  [data-hermes-theme="claude-light"] .group\\/tab:not([data-active="true"]):hover span {
     color: #111111 !important;
   }
 
   /* Active Tab State */
   .group\\/pane-header [data-tree-tab][data-active="true"],
   [data-zone-tabstrip] [data-tree-tab][data-active="true"],
-  .group\\/tab[data-active="true"] {
+  .group\\/tab[data-active="true"],
+  [data-active="true"] {
     background: var(--ui-editor-surface-background, var(--background)) !important;
     opacity: 1 !important;
     font-weight: 600 !important;
@@ -100,22 +106,27 @@ const CSS_CONTENT = `
     z-index: 2 !important;
   }
 
-  /* Active Tab Text - Dark Mode (Bright Clear White) */
+  /* Active Tab Text - Dark Mode (Crisp Solid White) */
   .dark .group\\/pane-header [data-tree-tab][data-active="true"],
   .dark [data-zone-tabstrip] [data-tree-tab][data-active="true"],
   .dark .group\\/tab[data-active="true"],
   .dark .group\\/tab[data-active="true"] span,
-  .dark [data-tree-tab][data-active="true"] span {
+  .dark [data-tree-tab][data-active="true"] span,
+  [data-hermes-mode="dark"] [data-tree-tab][data-active="true"] span,
+  [data-hermes-theme="claude-dark"] [data-tree-tab][data-active="true"] span,
+  [data-hermes-theme="claude"] [data-tree-tab][data-active="true"] span,
+  [data-hermes-theme="claude-dark"] [data-active="true"] span,
+  [data-hermes-theme="claude"] [data-active="true"] span {
     color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    -webkit-font-smoothing: antialiased !important;
   }
 
   /* Active Tab Text - Light Mode (Crisp Black/Charcoal) */
-  :not(.dark) .group\\/pane-header [data-tree-tab][data-active="true"],
-  :not(.dark) [data-zone-tabstrip] [data-tree-tab][data-active="true"],
-  :not(.dark) .group\\/tab[data-active="true"],
-  :not(.dark) .group\\/tab[data-active="true"] span,
-  :not(.dark) [data-tree-tab][data-active="true"] span {
+  :not(.dark):not([data-hermes-mode="dark"]) [data-tree-tab][data-active="true"],
+  :not(.dark):not([data-hermes-mode="dark"]) [data-tree-tab][data-active="true"] span,
+  [data-hermes-theme="claude-light"] [data-tree-tab][data-active="true"] span,
+  [data-hermes-theme="claude-light"] [data-active="true"] span {
     color: #111111 !important;
   }
 

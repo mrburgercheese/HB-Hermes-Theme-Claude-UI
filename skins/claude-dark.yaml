@@ -16,9 +16,11 @@ colors:
   banner_accent: "#d97757"
 
   # Text Hierarchy
-  banner_title: "#f4ede4"        # Warm off-white headings
+  banner_title: "#ffffff"        # Crisp white headings
+  ui_primary: "#ffffff"          # Primary white text
   banner_text: "#ece6de"         # Warm cream body text
   ui_text: "#ece6de"
+  ui_label: "#ece6de"
   banner_dim: "#9c9489"          # Muted warm secondary text
   banner_border: "#383532"       # Subtle warm border
   ui_border: "#383532"
