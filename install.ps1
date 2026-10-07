@@ -59,24 +59,10 @@ foreach ($skin in $SkinFiles) {
     }
 }
 
-# 3. Desktop tab enhance plugin
-$PluginsDir = Join-Path $HermesHome "desktop-plugins\claude-enhanced-tabs"
-if (-not (Test-Path $PluginsDir)) {
-    New-Item -ItemType Directory -Path $PluginsDir -Force | Out-Null
-}
-$PluginTarget = Join-Path $PluginsDir "plugin.js"
-if ($ScriptDir -and (Test-Path (Join-Path $ScriptDir "desktop-plugins\claude-enhanced-tabs\plugin.js"))) {
-    Write-Host "  📦 Copying claude-enhanced-tabs desktop plugin (local)..." -ForegroundColor Gray
-    Copy-Item -Path (Join-Path $ScriptDir "desktop-plugins\claude-enhanced-tabs\plugin.js") -Destination $PluginTarget -Force
-} else {
-    Write-Host "  🌐 Downloading claude-enhanced-tabs desktop plugin from GitHub..." -ForegroundColor Gray
-    Invoke-WebRequest -Uri "$RepoBase/desktop-plugins/claude-enhanced-tabs/plugin.js" -OutFile $PluginTarget -UseBasicParsing -ErrorAction SilentlyContinue
-}
-
-Write-Host "  ✓ Skin & Plugin files installed successfully." -ForegroundColor Green
+Write-Host "  ✓ Skin files installed successfully." -ForegroundColor Green
 Write-Host ""
 
-# 4. Apply Config
+# 3. Apply Config
 $hermesCmd = Get-Command "hermes" -ErrorAction SilentlyContinue
 if ($hermesCmd) {
     Write-Host "  ⚙️ Applying optimal Claude UI configurations..." -ForegroundColor Cyan

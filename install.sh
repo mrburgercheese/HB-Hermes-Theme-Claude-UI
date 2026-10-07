@@ -60,21 +60,10 @@ for skin in "${SKIN_FILES[@]}"; do
   fi
 done
 
-# 3. Desktop tab enhance plugin
-PLUGINS_DIR="$TARGET_HERMES_HOME/desktop-plugins/claude-enhanced-tabs"
-mkdir -p "$PLUGINS_DIR"
-if [ -f "$SCRIPT_DIR/desktop-plugins/claude-enhanced-tabs/plugin.js" ]; then
-  echo "  📦 Copying claude-enhanced-tabs desktop plugin (local)..."
-  cp "$SCRIPT_DIR/desktop-plugins/claude-enhanced-tabs/plugin.js" "$PLUGINS_DIR/plugin.js"
-else
-  echo "  🌐 Downloading claude-enhanced-tabs desktop plugin from GitHub..."
-  curl -fsSL "$REPO_BASE/desktop-plugins/claude-enhanced-tabs/plugin.js" -o "$PLUGINS_DIR/plugin.js" || true
-fi
-
-echo "  ✓ Skin & Plugin files installed successfully."
+echo "  ✓ Skin files installed successfully."
 echo ""
 
-# 4. Apply Hermes Configuration
+# 3. Apply Hermes Configuration
 if command -v hermes >/dev/null 2>&1; then
   echo "  ⚙️ Applying optimal Claude UI configurations..."
   
