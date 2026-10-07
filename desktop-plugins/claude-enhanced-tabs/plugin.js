@@ -52,8 +52,23 @@ const CSS_CONTENT = `
   [data-zone-tabstrip] [data-tree-tab]:not([data-active="true"]),
   .group\\/tab:not([data-active="true"]) {
     background: color-mix(in srgb, var(--ui-sidebar-surface-background) 70%, transparent) !important;
-    color: var(--banner-dim, var(--ui-text-tertiary, #888)) !important;
     opacity: 0.85 !important;
+  }
+
+  /* Inactive Tab - Dark Mode Text */
+  .dark .group\\/pane-header [data-tree-tab]:not([data-active="true"]),
+  .dark [data-zone-tabstrip] [data-tree-tab]:not([data-active="true"]),
+  .dark .group\\/tab:not([data-active="true"]),
+  .dark .group\\/tab:not([data-active="true"]) span {
+    color: #a8a29e !important;
+  }
+
+  /* Inactive Tab - Light Mode Text */
+  :not(.dark) .group\\/pane-header [data-tree-tab]:not([data-active="true"]),
+  :not(.dark) [data-zone-tabstrip] [data-tree-tab]:not([data-active="true"]),
+  :not(.dark) .group\\/tab:not([data-active="true"]),
+  :not(.dark) .group\\/tab:not([data-active="true"]) span {
+    color: #57534e !important;
   }
 
   /* Inactive Tab Hover */
@@ -61,9 +76,14 @@ const CSS_CONTENT = `
   [data-zone-tabstrip] [data-tree-tab]:not([data-active="true"]):hover,
   .group\\/tab:not([data-active="true"]):hover {
     background: color-mix(in srgb, var(--ui-sidebar-surface-background) 95%, #fff 5%) !important;
-    color: var(--ui-text, #333) !important;
     opacity: 1 !important;
     border-color: var(--ui-stroke-secondary, rgba(128, 128, 128, 0.35)) !important;
+  }
+  .dark .group\\/tab:not([data-active="true"]):hover span {
+    color: #ffffff !important;
+  }
+  :not(.dark) .group\\/tab:not([data-active="true"]):hover span {
+    color: #111111 !important;
   }
 
   /* Active Tab State */
@@ -71,17 +91,35 @@ const CSS_CONTENT = `
   [data-zone-tabstrip] [data-tree-tab][data-active="true"],
   .group\\/tab[data-active="true"] {
     background: var(--ui-editor-surface-background, var(--background)) !important;
-    color: var(--ui-primary, var(--ui-text, #111)) !important;
     opacity: 1 !important;
     font-weight: 600 !important;
     border-top: 1px solid var(--ui-stroke-secondary, rgba(128, 128, 128, 0.35)) !important;
     border-left: 1px solid var(--ui-stroke-secondary, rgba(128, 128, 128, 0.35)) !important;
     border-right: 1px solid var(--ui-stroke-secondary, rgba(128, 128, 128, 0.35)) !important;
-    box-shadow: inset 0 -3px 0 var(--pane-tab-active-accent, var(--ui-accent, #c96442)) !important;
+    box-shadow: inset 0 -3px 0 var(--pane-tab-active-accent, var(--ui-accent, #d97757)) !important;
     z-index: 2 !important;
   }
 
-  /* Tab Text / Label */
+  /* Active Tab Text - Dark Mode (Bright Clear White) */
+  .dark .group\\/pane-header [data-tree-tab][data-active="true"],
+  .dark [data-zone-tabstrip] [data-tree-tab][data-active="true"],
+  .dark .group\\/tab[data-active="true"],
+  .dark .group\\/tab[data-active="true"] span,
+  .dark [data-tree-tab][data-active="true"] span {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Active Tab Text - Light Mode (Crisp Black/Charcoal) */
+  :not(.dark) .group\\/pane-header [data-tree-tab][data-active="true"],
+  :not(.dark) [data-zone-tabstrip] [data-tree-tab][data-active="true"],
+  :not(.dark) .group\\/tab[data-active="true"],
+  :not(.dark) .group\\/tab[data-active="true"] span,
+  :not(.dark) [data-tree-tab][data-active="true"] span {
+    color: #111111 !important;
+  }
+
+  /* Tab Text / Label Typography */
   .group\\/pane-header [data-tree-tab] span,
   [data-zone-tabstrip] [data-tree-tab] span,
   .group\\/tab span {
@@ -122,7 +160,6 @@ export default {
   name: 'Claude UI Enhanced Tabs',
   register(ctx) {
     injectStyles();
-    // Re-inject on dynamic remounts if needed
     if (typeof window !== 'undefined') {
       window.addEventListener('focus', injectStyles);
     }
