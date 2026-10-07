@@ -12,7 +12,7 @@ Paket tema dan konfigurasi **Claude UI (Anthropic)** untuk [Hermes Agent](https:
 
 - 🎨 **Palet Otentik Anthropic Claude**:
   - **Claude Dark**: Latar *warm espresso / charcoal* (`#1F1E1D`) dengan aksen *terracotta coral* (`#D97757`) dan teks *warm cream* (`#ECE6DE`).
-  - **Claude Light**: Latar *warm parchment / cream* (`#FAF8F5`) dengan aksen *terracotta brown* (`#C96442`) dan teks *charcoal* (`#2D2B28`).
+  - **Claude Light**: Latar *warm parchment / cream* (`#E6DFD3`) dengan aksen *terracotta brown* (`#C96442`) dan teks *charcoal* (`#141414`).
 - 👁️ **WCAG AA Compliant**: Kontras warna tinggi dan nyaman di mata untuk sesi coding & riset maraton.
 - 📐 **Collapsible Thinking / Reasoning**: Blok pemikiran model terlipat otomatis rapi seperti fitur *Thinking* di Claude 3.7.
 - 🧰 **Product-Oriented Tool Summaries**: Ringkasan aksi tool yang ringkas dan ramah pembaca, bukan raw dump JSON.
@@ -90,13 +90,13 @@ Tolong pasang dan terapkan tema Claude UI dari repositori https://github.com/mrb
 ### Claude Light (`claude-light.yaml`)
 | Elemen | Hex Color | Deskripsi |
 |---|---|---|
-| **Canvas Background** | `#FAF8F5` | Warm Parchment / Cream |
+| **Canvas Background** | `#E6DFD3` | Warm Parchment / Cream |
 | **Primary Accent** | `#C96442` | Warm Terracotta Brown |
 | **Title / Headings** | `#1F1E1D` | Deep Charcoal |
-| **Body Foreground** | `#2D2B28` | Warm Dark Grey |
-| **Muted / Secondary** | `#7D7871` | Muted Secondary Grey |
-| **Borders & Dividers** | `#E5DFD5` | Subtle Parchment Border |
-| **Status Bar BG** | `#F0EBE1` | Warm Soft Base |
+| **Body Foreground** | `#141414` | Warm Dark Grey |
+| **Muted / Secondary** | `#4A4642` | Muted Secondary Grey |
+| **Borders & Dividers** | `#CFC5B4` | Subtle Parchment Border |
+| **Status Bar BG** | `#DAD2C4` | Warm Soft Base |
 
 ---
 

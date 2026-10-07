@@ -9,40 +9,42 @@ description: Anthropic Claude inspired light theme — warm parchment & terracot
 
 colors:
   # Base Canvas & Surface
-  background: "#faf8f5"          # Warm parchment / cream canvas
+  background: "#e6dfd3"          # Muted warm parchment canvas (darker, calm on eyes)
 
   # Brand Accent
   ui_accent: "#c96442"           # Terracotta / warm orange-brown
   banner_accent: "#c96442"
 
   # Text Hierarchy
-  banner_title: "#1f1e1d"        # Deep charcoal headings
-  banner_text: "#2d2b28"         # Warm dark grey body text
-  ui_text: "#2d2b28"
-  banner_dim: "#7d7871"          # Muted warm secondary text
-  banner_border: "#e5dfd5"       # Subtle parchment border
-  ui_border: "#e5dfd5"
+  banner_title: "#111111"        # Solid black/charcoal headings
+  ui_primary: "#111111"          # Primary text
+  banner_text: "#141414"         # Deep crisp black/charcoal body text (high contrast)
+  ui_text: "#141414"
+  ui_label: "#141414"
+  banner_dim: "#4a4642"          # Darker legible secondary text (no washed-out grey)
+  banner_border: "#cfc5b4"       # Muted border matching canvas
+  ui_border: "#cfc5b4"
 
   # Semantic Status Colors
-  ui_ok: "#388e3c"               # Balanced green
-  ui_warn: "#d97706"             # Warm amber
-  ui_error: "#c62828"            # Terracotta red
+  ui_ok: "#2e7d32"               # High-contrast green
+  ui_warn: "#b45309"             # High-contrast amber
+  ui_error: "#b91c1c"            # High-contrast red
 
   # CLI / TUI Chrome & Status Bar
   prompt: "#c96442"
   input_rule: "#c96442"
   response_border: "#c96442"
-  status_bar_bg: "#f0ebe1"
-  status_bar_text: "#2d2b28"
-  status_bar_good: "#388e3c"
-  status_bar_warn: "#d97706"
-  status_bar_critical: "#c62828"
-  session_label: "#1f1e1d"
-  session_border: "#e5dfd5"
+  status_bar_bg: "#dad2c4"
+  status_bar_text: "#141414"
+  status_bar_good: "#2e7d32"
+  status_bar_warn: "#b45309"
+  status_bar_critical: "#b91c1c"
+  session_label: "#111111"
+  session_border: "#cfc5b4"
 
   # Tool & Reasoning Elements
   ui_tool: "#c96442"
-  ui_thinking: "#7d7871"
+  ui_thinking: "#4a4642"
 
 branding:
   agent_name: Hermes
