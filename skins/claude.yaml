@@ -1,0 +1,51 @@
+# ==============================================================================
+# Claude Theme for Hermes Agent (Desktop / TUI / CLI)
+# Inspired by Anthropic Claude UI — Default Dark Palette
+# Repository: https://github.com/mrburgercheese/HB-Hermes-Theme-Claude-UI
+# ==============================================================================
+
+name: claude
+description: Anthropic Claude inspired theme — warm espresso & terracotta accent
+
+colors:
+  # Base Canvas & Surface
+  background: "#1f1e1d"          # Warm charcoal / espresso canvas
+
+  # Brand Accent
+  ui_accent: "#d97757"           # Anthropic terracotta / warm coral
+  banner_accent: "#d97757"
+
+  # Text Hierarchy
+  banner_title: "#f4ede4"        # Warm off-white headings
+  banner_text: "#ece6de"         # Warm cream body text
+  ui_text: "#ece6de"
+  banner_dim: "#9c9489"          # Muted warm secondary text
+  banner_border: "#383532"       # Subtle warm border
+  ui_border: "#383532"
+
+  # Semantic Status Colors
+  ui_ok: "#6bb07b"               # Soft muted green
+  ui_warn: "#e5a95d"             # Warm amber
+  ui_error: "#d96557"            # Coral red
+
+  # CLI / TUI Chrome & Status Bar
+  prompt: "#d97757"
+  input_rule: "#d97757"
+  response_border: "#d97757"
+  status_bar_bg: "#181716"
+  status_bar_text: "#ece6de"
+  status_bar_good: "#6bb07b"
+  status_bar_warn: "#e5a95d"
+  status_bar_critical: "#d96557"
+  session_label: "#f4ede4"
+  session_border: "#383532"
+
+  # Tool & Reasoning Elements
+  ui_tool: "#d97757"
+  ui_thinking: "#9c9489"
+
+branding:
+  agent_name: Hermes
+  prompt_symbol: "❯"
+
+tool_prefix: "┊"
