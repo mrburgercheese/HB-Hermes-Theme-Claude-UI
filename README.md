@@ -2,7 +2,7 @@
 
 [![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-Theme-D97757?style=flat-square&logo=anthropic)](https://hermes-agent.nousresearch.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-383532?style=flat-square)](LICENSE)
-[![Release](https://img.shields.io/badge/Version-v1.1.0-D97757?style=flat-square)](https://github.com/mrburgercheese/HB-Hermes-Theme-Claude-UI/releases/tag/v1.1.0)
+[![Release](https://img.shields.io/badge/Version-v1.2.0-D97757?style=flat-square)](https://github.com/mrburgercheese/HB-Hermes-Theme-Claude-UI/releases/tag/v1.2.0)
 [![Styles](https://img.shields.io/badge/Styles-Dark%20%26%20Light-1F1E1D?style=flat-square)](#-color-palette)
 
 Paket tema dan konfigurasi **Claude UI (Anthropic)** untuk [Hermes Agent](https://github.com/NousResearch/hermes-agent) (Desktop App, TUI, dan CLI). Menghadirkan palet warna khas *warm terracotta & espresso/parchment*, tipografi bersih, serta konfigurasi *distraction-free* yang dirancang khusus untuk kenyamanan membaca percakapan panjang.
