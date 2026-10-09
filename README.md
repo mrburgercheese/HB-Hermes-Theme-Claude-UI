@@ -109,6 +109,7 @@ HB-Hermes-Theme-Claude-UI/
 │   ├── claude-dark.yaml     # Skin Dark Mode (Espresso & Terracotta)
 │   ├── claude-light.yaml    # Skin Light Mode (Parchment & Terracotta)
 │   └── claude.yaml          # Default Alias
+├── config.example.yaml      # Rekomendasi konfigurasi display & sistem Hermes (tanpa model/keys)
 ├── install.sh               # Bash installer (Linux/macOS/WSL)
 ├── install.ps1              # PowerShell installer (Windows)
 ├── install.py               # Universal Python installer
