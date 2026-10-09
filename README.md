@@ -113,6 +113,7 @@ HB-Hermes-Theme-Claude-UI/
 ├── install.sh               # Bash installer (Linux/macOS/WSL)
 ├── install.ps1              # PowerShell installer (Windows)
 ├── install.py               # Universal Python installer
+├── CHANGELOG.md             # Catatan riwayat versi & perubahan
 ├── LICENSE                  # MIT License
 └── README.md                # Dokumentasi
 ```
